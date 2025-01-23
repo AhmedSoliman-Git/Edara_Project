@@ -29,7 +29,7 @@ export default function Lines() {
 
   return (
     <>
-      <div>
+      <section>
         <div className="w-full relative p-24" ref={lineRef}>
           <p className="line absolute top-12 left-0 bg-[black] w-0 h-1 duration-200"></p>
           <p className="line absolute top-20 left-0 bg-[black] w-0 h-1 duration-200"></p>
@@ -37,7 +37,7 @@ export default function Lines() {
           <p className="line absolute top-24 right-0 bg-[#e0b472] w-0 h-1 duration-200"></p>
         </div>
         <p className={classes}> {t("text")}</p>
-      </div>
+      </section>
     </>
   );
 }

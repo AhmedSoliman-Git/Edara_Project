@@ -18,7 +18,7 @@ export default function Idea() {
     hClasses = "text-2xl sm:text-4xl text-[#e0b472] mb-6 font-arab";
   }
   return (
-    <div className="mb-20">
+    <section className="mb-20">
       <div className="w-full py-28 p-11 bg-black  text-center ">
         <p className="font-PoppinsE text-[#e0b472] text-2xl md:text-5xl">
           Ready to Start your Projects ?
@@ -37,6 +37,6 @@ export default function Idea() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
