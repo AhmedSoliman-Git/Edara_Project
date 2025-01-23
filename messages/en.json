@@ -1,0 +1,42 @@
+{
+  "NavBar": {  
+    "home" : "Home" ,
+    "services" : "Services",
+    "help" : "Contact Us" ,
+    "about_us" :"About Us"
+  } ,
+  "Slider": {  
+    "HEAD" : "Build your vision with precision,with",
+    "P" : "erada construction engineering",
+    "btn1" : "Contact us",
+    "btn2" : "Start Now", 
+    "text" : "Discover More"
+  } ,
+  "Text" : {
+    "buildt1" : "We’ve spent decades building an enviable reputation as one of the nation’s leading general contractors. Clients continually rely on us to meet – and exceed – their schedules, specifications and budgets on each project we are assigned. This has helped us grow successful relationships with some of the most prominent brands in the world." ,
+    "buildth1" : "We Look At Construction Differently...",
+    "TrasTh" : "Transform Your Ideas Into Reality ..",
+    "TrasTp" : "Turn your visions into tangible results with innovative solutions that bring your ideas to life. Let’s make the extraordinary happen together!",
+    "TrasTB" : "Contact Us"
+  },
+
+  "SERVICES" : {
+    "SERH" : "Services",
+    "SER1" : "Sure , we Construct impressive structures",
+    "SER2" : "construction",
+    "SER3" : "Expertly crafting durable and innovative structures with precision and quality. Building the future, one project at a time",
+    "SER4" : "Renovation",
+    "SER5" : "Transforming spaces with expert craftsmanship and modern design. Breathe new life into your home or office .",
+    "SER6" : "(HVAC)Systems",
+    "SER7" : "Delivering efficient and reliable HVAC solutions for optimal comfort and air quality. We design, install, and maintain systems tailored to your needs.",
+    "SER8" : "Special project",
+    "SER9" : "Bringing your vision to life with custom-designed projects tailored to your needs. We create unique solutions that match your style and requirements",
+    "SER10" : "Consulting",
+    "SER11" : "Providing expert consulting to guide your project from concept to completion. We help you make the best choices, ensuring quality.",
+    "SER12" : "Learn more" ,
+    "SER13" : "Electrical System" ,
+    "SER14" : "We provide comprehensive solutions for efficient and reliable electrical system management. From planning to execution",
+    "SER15" : "(MEP) Systems",
+    "SER16" : "Providing integrated MEP solutions to ensure efficiency, sustainability, and seamless functionality. From design to execution, we optimize building performance with precision."
+  }
+}

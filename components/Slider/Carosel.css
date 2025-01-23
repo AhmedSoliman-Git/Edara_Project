@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'BubbleFont';
+    src: url('../../Fonts/Bubble-w10MZ.otf');
+}
+@font-face {
+    font-family: 'AzonixFont';
+    src: url('../../Fonts/Azonix-1VB0.otf');
+}
+@font-face {
+    font-family: 'RedGlass';
+    src: url('../../Fonts/RedGlass-BWx23.ttf');
+}
+@font-face {
+    font-family: 'AwakeFont';
+    src: url('../../Fonts/AwakenningPersonalUse-DOLPD.ttf');
+}
+@font-face {
+    font-family: 'PoppinsM';
+    src: url('../../Fonts/PoppinsMedium-1JPv.otf');
+}
+@font-face {
+    font-family: 'PoppinsE';
+    src: url('../../Fonts/PoppinsExtralight-6Je1.otf');
+}
+@font-face {
+    font-family: 'PlatNomor';
+    src: url('../../Fonts/PlatNomor-WyVnn.ttf');
+}
+
+.carasol {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.4s ease;
+    opacity: 0;
+    display: flex;
+    object-position: 80%;
+}
+
+.carasol_cardActive {
+    opacity: 1;
+}
+.carosel-div{
+    width: 100%;
+    height: 500px;
+}
+.addShadow::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+
+.btn{
+    text-decoration: none;
+    border: 2px solid #e0b472;
+    position: relative;
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    text-transform:uppercase; 
+}
+.btn:hover{
+color: white;
+}
+.btn:before{
+content: "";
+position: absolute;
+background-color: #e0b472;
+width: 100%;
+height: 0;
+border-radius: 0 0 50% 50%;
+top: 0px;
+left: 0px;
+z-index: -1;
+transition: 0.3s ease;
+}
+.btn:hover:before{
+transition: 0.3s ease;
+height: 180%;
+}
+
+
