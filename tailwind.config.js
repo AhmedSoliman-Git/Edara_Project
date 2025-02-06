@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     fontFamily:{
-      'arab' : ['Noto Kufi Arabic','sans-serif'] ,
+      'arab' : ['arab','sans-serif'] ,
       'Bubble' : ['BubbleFont' , 'sans-serif'],
       'Azonix' : ['AzonixFont' ,'sans-serif'],
       'RedGlass' : ['RedGlass' , 'sans-serif'],

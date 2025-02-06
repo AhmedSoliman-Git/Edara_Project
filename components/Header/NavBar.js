@@ -17,19 +17,22 @@ export default function NavBar() {
   const t = useTranslations("NavBar");
   const path = usePathname();
 
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 100) {
         headerRef.current.style.backgroundColor = "black";
       } else {
-        headerRef.current.style.backgroundColor = "transparent"; // يرجع اللون الأصلي
+        headerRef.current.style.backgroundColor = "transparent";
       }
     };
+
+
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // تنظيف الحدث
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -38,10 +41,10 @@ export default function NavBar() {
     <>
 
 
-      <header className={classes.header} ref={headerRef}>
+      <header className={classes.header + " font-arab"} ref={headerRef}>
 
         <div className={classes.letters}>
-          <Image src={Logo} priority alt="Logo"/>
+          <Image src={Logo} width={200} height={200} priority alt="Logo"/>
         </div>
         <nav className={classes.nav}>
           <ul

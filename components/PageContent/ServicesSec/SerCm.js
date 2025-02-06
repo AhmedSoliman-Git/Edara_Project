@@ -16,8 +16,7 @@ export default function serCm() {
   const path = usePathname();
   let classes = "font-PoppinsE mb-5";
   let hClass = "text-[3rem] text-center font-Azonix";
-  let servicesText =
-    "flex flex-col items-start px-3 pb-10 pt-12 bg-[#ffffff] font-PlatNomor";
+  let servicesText ="flex flex-col items-start px-3 pb-10 pt-12 bg-[#ffffff] font-PlatNomor";
   let pP = "font-PoppinsE text-bold mb-1";
 
   if (path.includes("ar")) {
@@ -34,7 +33,7 @@ export default function serCm() {
         <p className="w-1/3 font-bold bg-[#e0b472] h-2 m-auto"></p>
       </div>
 
-      <div className="grid grid-cols-1 p-4 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:p-24 mx-10 mb-48 bg-[#efefef]">
+      <div className="grid grid-cols-1 p-0 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:p-24 mx-0 md:mx-10 mb-48 bg-[#efefef]">
         <div>
           <Image src={image1} alt="building drawing" />
           <div className={servicesText}>

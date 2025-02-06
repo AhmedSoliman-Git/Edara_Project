@@ -9,6 +9,7 @@ export const metadata = {
   title: "Erada Construction",
   description: "building",
   
+  
 };
 
 export default async function LocaleLayout({

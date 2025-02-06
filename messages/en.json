@@ -24,18 +24,18 @@
     "SERH" : "Services",
     "SER1" : "Sure , we Construct impressive structures",
     "SER2" : "construction",
-    "SER3" : "Expertly crafting durable and innovative structures with precision and quality. Building the future, one project at a time",
+    "SER3" : "Expertly crafting durable and innovative structures with precision and quality. Building the future at time .",
     "SER4" : "Renovation",
-    "SER5" : "Transforming spaces with expert craftsmanship and modern design. Breathe new life into your home or office .",
+    "SER5" : "Transforming spaces with expert craftsmanship and modern design. Breathe new life into your world.",
     "SER6" : "(HVAC)Systems",
-    "SER7" : "Delivering efficient and reliable HVAC solutions for optimal comfort and air quality. We design, install, and maintain systems tailored to your needs.",
+    "SER7" : "Delivering efficient and reliable HVAC solutions for optimal comfort and air quality. We maintain systems.",
     "SER8" : "Special project",
-    "SER9" : "Bringing your vision to life with custom-designed projects tailored to your needs. We create unique solutions that match your style and requirements",
+    "SER9" : "Bringing your vision to life with custom-designed projects tailored to your needs. We create unique solutions.",
     "SER10" : "Consulting",
-    "SER11" : "Providing expert consulting to guide your project from concept to completion. We help you make the best choices, ensuring quality.",
+    "SER11" : "Providing expert consulting to guide your project from concept to completion. We help you make best choices.",
     "SER12" : "Learn more" ,
     "SER13" : "Electrical System" ,
-    "SER14" : "We provide comprehensive solutions for efficient and reliable electrical system management. From planning to execution",
+    "SER14" : "We provide comprehensive solutions for efficient and reliable electrical system From planning to execution.",
     "SER15" : "(MEP) Systems",
     "SER16" : "Providing integrated MEP solutions to ensure efficiency, sustainability, and seamless functionality. From design to execution, we optimize building performance with precision."
   },
@@ -47,6 +47,32 @@
     "BEN4" : "transparent Communication",
     "BEN5" : "Experienced team",
     "BEN6" : "Safety First" ,
-    "BEN7" : "Timely completion"
+    "BEN7" : "Timely completion",
+    "BEN8" : "With years of experience and a commitment to excellence, we deliver reliable solutions tailored to your needs. Trust us to bring quality, innovation, and precision to every project",
+    "BEN9" : "Dedicated to delivering superior craftsmanship and exceptional standards. We ensure every project meets the highest levels of quality and precision",
+    "BEN10" : "We believe in honesty and clarity at every stage. Our team keeps you informed to ensure a smooth and successful project experience",
+    "BEN11" : "Our skilled professionals bring expertise and dedication to every project. We ensure top-quality results with precision and efficiency",
+    "BEN12" :"We prioritize safety in every aspect of our work. Our strict standards ensure a secure and accident-free environment",
+    "BEN13" :"We deliver projects on schedule without compromising quality. Efficiency and precision drive our commitment to deadlines."
+  } ,
+  "Footer" : {
+    "t1" : "Make Your Dream With Erada" ,
+    "t2" : "We specialize in creating construction companies 🚀 " ,
+    "t3" : "Our Services" ,
+    "ts4" : "Cost Estimation" ,
+    "ts5" : "Implementation" ,
+    "ts6" : "Procurement" ,
+    "t8" : "IMPORTANT LINKS" ,
+    "ti9" : "Home",
+    "ti10" :"About Us" ,
+    "ti11" : "Services",
+    "ti12" : "Contact Us",
+    "t13" : "CONTACT INFORMATION" ,
+    "t14" :"Contact with us all hours we are available"
+  } ,
+  "Contact" :{
+    "c1" : "Don't Distributed to Contact Us" ,
+    "c2" : "Need expert solutions? Get in touch with us for seamless project execution. Let me know if you need a specific tone or style!",
+    "c3" : "Contact Us"
   }
 }

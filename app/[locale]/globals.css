@@ -1,7 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'BubbleFont';
+  src: url('../../Fonts/Bubble-w10MZ.otf') format('opentype');
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'AzonixFont';
+  src: url('../../Fonts/Azonix-1VB0.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RedGlass';
+  src: url('../../Fonts/RedGlass-BWx23.ttf') format('opentype');
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'AwakeFont';
+  src: url('../../Fonts/AwakenningPersonalUse-DOLPD.ttf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PoppinsM';
+  src: url('../../Fonts/PoppinsMedium-1JPv.otf') format('opentype');
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'PoppinsE';
+  src: url('../../Fonts/PoppinsExtralight-6Je1.otf') format('opentype');
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'PlatNomor';
+  src: url('../../Fonts/PlatNomor-WyVnn.ttf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'arab';
+  src: url('../../Fonts/Noto.ttf') format('opentype');
+  font-display: swap;
+}
+
+
+
+
+
 
 :root {
   --background: #ffffff;
@@ -21,6 +79,10 @@ body {
   overflow-x: hidden;
   scrollbar-color: #e0b472 rgb(27, 26, 26);
   scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+body ::selection {
+  background-color: rgb(140, 137, 137);
 }
 
 body {
@@ -90,6 +152,44 @@ a {
   0% {
     background-position: 500% 0;
   }
-}
+}/* loadingPageEnd */
 
-/* loadingPageEnd */
+/*Services Start*/
+.banner {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+/*Services End*/
+
+/*About_Us Start*/
+
+.heading {
+  font-size: 8rem;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  border: 0.3rem solid white;
+  border-radius: 3rem;
+  padding: 1rem 1rem;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.heading:hover {
+  color: #e0b472;
+  transition: all 0.3s ease-in;
+  border: 0.3rem solid #e0b472;
+}
+.aboutImg {
+  height: 80vh;
+  object-fit: cover;
+}
+.imgContainer::before {
+  content: "";
+  position: absolute;
+  background-color: #0a0a0a8b;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/*About_Us End*/
+

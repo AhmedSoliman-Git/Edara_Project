@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
+import { Link } from "../../i18n/routing";
 import first from "../../public/photos/water2.jpg";
 import second from "../../public/photos/water3.jpg";
 import third from "../../public/photos/build1.jpg";
@@ -105,32 +106,31 @@ export default function Carosel() {
                 {t("P")}
               </h5>
               <div className="space-x-3 text-white flex">
-                <button className="btn w-1/2 font-bold  py-3 sm:px-10 sm:py-2 md:px-10 md:py-5 rounded-xl border cursor-pointer shadow-lg md:font-medium md:text-2xl duration-200">
+                <Link href ="/" className=" btn w-1/2 text-center font-bold  py-3 sm:px-10 sm:py-2 md:px-10 md:py-5 rounded-xl border cursor-pointer shadow-lg md:font-medium md:text-2xl duration-200">
                   {t("btn1")}
-                </button>
-                <button className="btn w-1/2 font-bold  py-3 sm:px-10 sm:py-2 md:px-10 md:py-5 rounded-xl border cursor-pointer shadow-lg md:font-medium md:text-2xl  duration-200">
+                </Link>
+                <Link href ="/" className="btn w-1/2 text-center font-bold  py-3 sm:px-10 sm:py-2 md:px-10 md:py-5 rounded-xl border cursor-pointer shadow-lg md:font-medium md:text-2xl  duration-200">
                   {t("btn2")}
-                </button>
+                </Link>
 
-                {/* <div class="isolate aspect-video w-96 rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5"> */}
               </div>
             </div>
 
             <div>
               <div
-                className="text-3xl leading-[100%] text-center hover:text-orange-500  duration-300 font-bold text-white px-1 cursor-pointer select-none"
+                className="text-3xl leading-[100%] text-center hover:text-[#e0b472]  duration-300 font-bold text-white px-1 cursor-pointer select-none"
                 onClick={previousSlide}
               >
                 {" "}
-                <span className="border-b-2 border-solid border-orange-600">
+                <span>
                   <SlArrowRight />
                 </span>
               </div>
               <div
-                className="text-3xl leading-[100%] text-center hover:text-orange-500  duration-300 font-bold text-white px-1 cursor-pointer select-none"
+                className="text-3xl leading-[100%] text-center hover:text-[#e0b472]  duration-300 font-bold text-white px-1 cursor-pointer select-none"
                 onClick={nextSlide}
               >
-                <span className="border-b-2 border-solid border-orange-600">
+                <span>
                   <SlArrowLeft />
                 </span>
               </div>
@@ -156,11 +156,6 @@ export default function Carosel() {
         </div>
       </div>
     </>
-  );
+  )};
 
-  // background: linear-gradient(90deg, #ff8a05, #f9b331);
-  // background-clip: text;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // text-shadow: 0 0 18px rgba(248, 190, 42, 0.8);
-}
+
