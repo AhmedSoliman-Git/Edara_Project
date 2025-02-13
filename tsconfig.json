@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/Header/NavBar.js", "app/[locale]/layout.tsx"  ],
+, "components/Header/NavBar.js", "app/[locale]/layout.tsx", "resend.ts"  ],
   "exclude": [
     "node_modules"
   ]

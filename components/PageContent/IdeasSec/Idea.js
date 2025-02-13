@@ -26,7 +26,12 @@ export default function Idea() {
       </div>
 
       <div className="imgb relative w-full h-[70vh] bg-black ">
-        <Image src={img} className="imageMain" alt="construction Building" />
+        <Image
+          src={img}
+          className="imageMain"
+          alt="construction Building"
+          loading="lazy"
+        />
         <div className={classes}>
           <h1 className={hClasses}>{t("TrasTh")}</h1>
           <p className="leading-8 text-white">{t("TrasTp")}</p>

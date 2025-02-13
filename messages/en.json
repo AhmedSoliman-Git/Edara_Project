@@ -1,7 +1,7 @@
 {
   "NavBar": {  
     "home" : "Home" ,
-    "services" : "Services",
+    "services" : "Projects",
     "help" : "Contact Us" ,
     "about_us" :"About Us"
   } ,

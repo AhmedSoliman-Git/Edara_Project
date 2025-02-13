@@ -5,18 +5,13 @@ import { Link } from "../../i18n/routing";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Logo from '../../public/photos/Erada.png'
-import { useRef,useEffect  } from "react";
-
-
-
-
+import Logo from "../../public/photos/Erada.png";
+import { useRef, useEffect } from "react";
 
 export default function NavBar() {
   const headerRef = useRef();
   const t = useTranslations("NavBar");
   const path = usePathname();
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +22,6 @@ export default function NavBar() {
       }
     };
 
-
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -36,15 +29,11 @@ export default function NavBar() {
     };
   }, []);
 
-
   return (
     <>
-
-
       <header className={classes.header + " font-arab"} ref={headerRef}>
-
         <div className={classes.letters}>
-          <Image src={Logo} width={200} height={200} priority alt="Logo"/>
+          <Image src={Logo} width={200} height={200} priority alt="Logo" />
         </div>
         <nav className={classes.nav}>
           <ul
@@ -92,7 +81,6 @@ export default function NavBar() {
             </li>
           </ul>
         </nav>
-
       </header>
 
       {/* <div className={classes.sideNav}>

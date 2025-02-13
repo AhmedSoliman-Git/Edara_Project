@@ -1,0 +1,55 @@
+"use client";
+import { useRef,useState } from "react";
+import emailjs from "@emailjs/browser";
+
+import Input from "./Input";
+export default function FormSend() {
+  let formRef = useRef();
+  const [name,setName] = useState('');
+  const [email,setEmail] = useState('');
+  const [message,setMessage] = useState('');
+  const [subject , setSubject] = useState('')
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const serviceId = "service_zozes9p" ;
+    const templateId = "template_jpf4xis";
+    const publicKey = "hHAkj1TZY8ikQFSPM" ;
+
+    const templateParams = {
+      from_name : name ,
+      from_email : email ,
+      to_name : "Erada Construction Company" ,
+      message : message ,
+      MessageSubject : subject
+    }
+    emailjs.send(serviceId , templateId , templateParams,publicKey)
+    .then((response)=>{
+      setName('');
+      setEmail('');
+      setMessage('');
+      setSubject('');
+    })
+  }
+
+
+
+  return (
+    <form
+      ref={formRef}
+      onSubmit={sendEmail}
+      className="flex flex-col items-start justify-start border outline-none p-5"
+    >
+      <Input type="text" placeholder="Full Name" value ={name} tInput onChange = {(e)=>setName(e.target.value)}/>
+      <Input type="email" placeholder="Email" tInput value={email} onChange = {(e)=>setEmail(e.target.value)}/>
+      <Input type="text" placeholder="Subject" tInput value={subject} onChange = {(e)=>setSubject(e.target.value)}/>
+      <Input type="text" placeholder="Enter a Message" value={message} onChange = {(e)=>setMessage(e.target.value)}/>
+      <button
+        type="submit"
+        className="hover:bg-stone-600 duration-300 px-6 py-3 bg-stone-800 text-white font-PoppinsE rounded-full mx-5 my-3"
+      >
+      Send Message
+      </button>
+    </form>
+  );
+}

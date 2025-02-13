@@ -1,8 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Link } from "../../../i18n/routing";
 import image1 from "../../../public/photos/Page Building/arch.jpg";
 import image2 from "../../../public/photos/Page Building/arch2.jpg";
 import image3 from "../../../public/photos/Page Building/reno.jpg";
@@ -10,13 +8,15 @@ import image4 from "../../../public/photos/Page Building/special.jpg";
 import image5 from "../../../public/photos/Page Building/cons.jpg";
 import image6 from "../../../public/photos/Page Building/electric.jpg";
 import image7 from "../../../public/photos/Page Building/mep.jpeg";
+import Service from "./Service";
 
 export default function serCm() {
   const t = useTranslations("SERVICES");
   const path = usePathname();
   let classes = "font-PoppinsE mb-5";
   let hClass = "text-[3rem] text-center font-Azonix";
-  let servicesText ="flex flex-col items-start px-3 pb-10 pt-12 bg-[#ffffff] font-PlatNomor";
+  let servicesText =
+    "flex flex-col items-start px-3 pb-10 pt-12 bg-[#ffffff] font-PlatNomor";
   let pP = "font-PoppinsE text-bold mb-1";
 
   if (path.includes("ar")) {
@@ -34,102 +34,70 @@ export default function serCm() {
       </div>
 
       <div className="grid grid-cols-1 p-0 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:p-24 mx-0 md:mx-10 mb-48 bg-[#efefef]">
-        <div>
-          <Image src={image1} alt="building drawing" />
-          <div className={servicesText}>
-            <h2 className="text-2xl md:text-4xl py-3">{t("SER2")}</h2>
-            <p className={pP}>{t("SER3")}</p>
-            <Link
-              href="/help"
-              className="btn px-7 py-3 w-full md:w-1/2 text-center font-bold mt-3 text-sm"
-            >
-              {t("SER12")}
-            </Link>
-          </div>
-        </div>
-
-        <div>
-          <Image src={image3} alt="Renovation" />
-          <div className={servicesText}>
-            <h2 className="text-2xl md:text-4xl py-3">{t("SER4")}</h2>
-            <p className={pP}>{t("SER5")}</p>
-            <Link
-              href="/help"
-              className="btn px-7 py-3 w-full md:w-1/2 text-center font-bold mt-3 text-sm"
-            >
-              {t("SER12")}
-            </Link>
-          </div>
-        </div>
-        <div>
-          <Image src={image2} alt="HVAC" />
-          <div className={servicesText}>
-            <h2 className="text-2xl md:text-4xl py-3">{t("SER6")}</h2>
-            <p className={pP}>{t("SER7")}</p>
-            <Link
-              href="/help"
-              className="btn px-7 py-3 w-full md:w-1/2 text-center font-bold mt-3 text-sm"
-            >
-              {t("SER12")}
-            </Link>
-          </div>
-        </div>
-
-        <div>
-          <Image src={image4} alt="Special work" />
-          <div className={servicesText}>
-            <h2 className="text-2xl md:text-4xl py-3">{t("SER8")}</h2>
-            <p className={pP}>{t("SER9")}</p>
-            <Link
-              href="/help"
-              className="btn px-7 py-3 w-full md:w-1/2 text-center font-bold mt-3 text-sm"
-            >
-              {t("SER12")}
-            </Link>
-          </div>
-        </div>
-
-        <div>
-          <Image src={image5} alt="Consulting" />
-          <div className={servicesText}>
-            <h2 className="text-2xl md:text-4xl py-3">{t("SER10")}</h2>
-            <p className={pP}>{t("SER11")}</p>
-            <Link
-              href="/help"
-              className="btn px-7 py-3 w-full md:w-1/2 text-center font-bold mt-3 text-sm"
-            >
-              {t("SER12")}
-            </Link>
-          </div>
-        </div>
-
-        <div>
-          <Image src={image6} alt="Electrical" />
-          <div className={servicesText}>
-            <h2 className="text-2xl md:text-4xl py-3">{t("SER13")}</h2>
-            <p className={pP}>{t("SER14")}</p>
-            <Link
-              href="/help"
-              className="btn px-7 py-3 w-full md:w-1/2 text-center font-bold mt-3 text-sm"
-            >
-              {t("SER12")}
-            </Link>
-          </div>
-        </div>
-
-        <div>
-          <Image src={image7} alt="MEP" />
-          <div className={servicesText}>
-            <h2 className="text-2xl md:text-4xl py-3">{t("SER15")}</h2>
-            <p className={pP}>{t("SER16")}</p>
-            <Link
-              href="/help"
-              className="btn px-7 py-3 w-full md:w-1/2 text-center font-bold mt-3 text-sm"
-            >
-              {t("SER12")}
-            </Link>
-          </div>
-        </div>
+        {/* { srvImg, servicesText, pP, t1, t2, t3 } */}
+        <Service
+          alt="building drawing"
+          srvImg={image1}
+          servicesText={servicesText}
+          pP={pP}
+          t1={t("SER2")}
+          t2={t("SER3")}
+          t3={t("SER12")}
+        />
+        <Service
+          alt="Renovation"
+          srvImg={image2}
+          servicesText={servicesText}
+          pP={pP}
+          t1={t("SER4")}
+          t2={t("SER5")}
+          t3={t("SER12")}
+        />
+        <Service
+          alt="HVAC"
+          srvImg={image3}
+          servicesText={servicesText}
+          pP={pP}
+          t1={t("SER6")}
+          t2={t("SER7")}
+          t3={t("SER12")}
+        />
+        <Service
+          alt="Special work"
+          srvImg={image4}
+          servicesText={servicesText}
+          pP={pP}
+          t1={t("SER8")}
+          t2={t("SER9")}
+          t3={t("SER12")}
+        />
+        <Service
+          alt="Consulting"
+          srvImg={image5}
+          servicesText={servicesText}
+          pP={pP}
+          t1={t("SER10")}
+          t2={t("SER11")}
+          t3={t("SER12")}
+        />
+        <Service
+          alt="Electrical"
+          srvImg={image6}
+          servicesText={servicesText}
+          pP={pP}
+          t1={t("SER13")}
+          t2={t("SER14")}
+          t3={t("SER12")}
+        />
+        <Service
+          alt="MEP"
+          srvImg={image7}
+          servicesText={servicesText}
+          pP={pP}
+          t1={t("SER15")}
+          t2={t("SER16")}
+          t3={t("SER12")}
+        />
       </div>
     </section>
   );

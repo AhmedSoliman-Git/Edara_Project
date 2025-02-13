@@ -8,8 +8,6 @@ import NavBar from "../../components/Header/NavBar";
 export const metadata = {
   title: "Erada Construction",
   description: "building",
-  
-  
 };
 
 export default async function LocaleLayout({
@@ -29,13 +27,11 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
-
-
   return (
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-        <NavBar />
+          <NavBar />
           {children}
         </NextIntlClientProvider>
       </body>

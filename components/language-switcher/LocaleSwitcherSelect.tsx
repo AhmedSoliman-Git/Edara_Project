@@ -3,7 +3,7 @@ import { Locale, routing, usePathname, useRouter } from "../../i18n/routing";
 import { useParams } from "next/navigation";
 import { ReactNode } from "react";
 import { useState } from "react";
-import classes from '../Header/NavBar.module.css' ;
+import classes from "../Header/NavBar.module.css";
 
 type Props = {
   children: ReactNode;
@@ -15,7 +15,6 @@ export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
-
 
   const onSelectChange: React.ChangeEventHandler<HTMLSelectElement> = (
     event

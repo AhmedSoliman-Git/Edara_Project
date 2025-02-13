@@ -21,7 +21,7 @@ export default function ConstructionText() {
     <>
       <div className="bg-black  block md:flex sm:items-center gap-10 relative">
         <div className="autor">
-          <Image src={build} width={600} alt="building" className="w-full  object-cover" />
+          <Image src={build} width={600} alt="building" className="w-full  object-cover" loading="lazy" />
         </div>
 
         <div className={classes}>

@@ -1,34 +1,82 @@
-'use client'
-import Image from "next/image";
 import img from "../../../public/photos/Page_otherPages/About.jpg";
-import { Link } from "../../../i18n/routing";
+import { AiOutlinePlus } from "react-icons/ai";
 import Lines from "../../../components/PageContent/Lines/ssLines";
-import Paragraph from "./DynamicParagraph";
-
+import Paragraph from "../../../components/TeamMembers/DynamicParagraph";
+import TeamMember from "../../../components/TeamMembers/TeamMember";
+import Image1 from "../../../public/photos/Page_otherPages/team/EngWeal.jpeg";
+import Image2 from "../../../public/photos/Page_otherPages/team/EngMo.jpeg";
+import Image4 from "../../../public/photos/Page_otherPages/team/MrDaw.jpeg";
+import Image3 from "../../../public/photos/Page_otherPages/team/aYehia.jpeg";
+import Footer from "../../../components/PageContent/Footer/Footer";
+import PageBanner from "../../../components/PageBanner";
 
 export default function About() {
-  let main_class = "font-Bubble";
-  let ParagraphText = "Get to know the exceptional team at New West Building Company, who drive excellence in construction through industry-leading talent development, core collaboration, innovative solutions."
-
+  let ParagraphText =
+    "Get to know the exceptional team at New West Building Company, who drive excellence in construction through industry-leading talent development, core collaboration, innovative solutions.";
+  let hClass = "text-5xl font-PlatNomor border-b-2 border-black pb-2";
 
   return (
     <section>
-      <div className="imgContainer relative w-full bg-black ">
-        <Image src={img} alt="About us" className="aboutImg" />
-        <h1 className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-          <Link href="#myDiv" className="heading font-Bubble">
-            Who are We ?
-          </Link>
-        </h1>
-      </div>
+      <PageBanner
+        img={img}
+        text="Who Are We ?"
+        id="#myDiv"
+        alt="About-Us"
+        classes=" hover:text-amber-700"
+      />
       <Lines />
-      <div id="myDiv" className=" my-20 p-8">
-        <div className="flex justify-center items-center gap-24">
-          <h2 className="text-5xl font-PlatNomor border-b-2 border-black pb-2">Meet Our Team</h2>
-          <Paragraph  text={ParagraphText} classes='text-xl font-PoppinsE w-2/3'/> 
+
+      <div>
+        <div className="my-20 p-8">
+          <Paragraph
+            additionalText="Meet Our Team"
+            Id="myDiv"
+            additionalTextClass={hClass}
+            text={ParagraphText}
+            ON={true}
+          />
+        </div>
+
+        <div className="Team grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 p-9 gap-9 px-10 py-20 bg-[#efefef] ">
+          <TeamMember
+            imgSrc={Image1}
+            text="Founder/General manager "
+            nickname="Eng"
+            name="Wael Belal"
+            Mypath="/aboutUs/EngWael"
+          />
+          <TeamMember
+            imgSrc={Image2}
+            text="Founder / Director (C.D)"
+            nickname="Eng"
+            name="Mohamed Elbaghdady"
+            Mypath="/aboutUs/EngMohamed"
+          />
+          <TeamMember
+            imgSrc={Image3}
+            text="Founder / Director (MEP)"
+            nickname="Eng"
+            name="Ahmed Yehia"
+            Mypath="/aboutUs/EngAhmed"
+          />
+          <TeamMember
+            imgSrc={Image4}
+            text="Assistant general manager"
+            nickname="MR"
+            name="Mohamed Dawoud"
+            Mypath="/aboutUs/MrMohamed"
+          />
         </div>
       </div>
-      
+
+      <span className=" m-auto text-2xl lg:text-4xl font-PoppinsE text-center my-24 flex justify-center items-center flex-wrap">
+        <span>Do you Want to see our Team Experience ..? Click up </span>
+        <span>
+          <AiOutlinePlus className="m-2 text-3xl cursor-pointer text-orange-500 box-border p-1 border rounded-lg duration-300 hover:bg-emerald-600 hover:text-white " />
+        </span>
+      </span>
+
+      <Footer />
     </section>
   );
 }
