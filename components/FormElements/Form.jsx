@@ -38,7 +38,7 @@ export default function FormSend() {
     <form
       ref={formRef}
       onSubmit={sendEmail}
-      className="flex flex-col items-start justify-start border outline-none p-5"
+      className="w-full p-0 flex flex-col items-start justify-start border outline-none md:p-5"
     >
       <Input type="text" placeholder="Full Name" value ={name} tInput onChange = {(e)=>setName(e.target.value)}/>
       <Input type="email" placeholder="Email" tInput value={email} onChange = {(e)=>setEmail(e.target.value)}/>
@@ -46,7 +46,7 @@ export default function FormSend() {
       <Input type="text" placeholder="Enter a Message" value={message} onChange = {(e)=>setMessage(e.target.value)}/>
       <button
         type="submit"
-        className="hover:bg-stone-600 duration-300 px-6 py-3 bg-stone-800 text-white font-PoppinsE rounded-full mx-5 my-3"
+        className="hover:bg-stone-600 duration-300 text-sm sm:text-lg px-3 py-1.5 md:px-6 md:py-3 bg-stone-800 text-white font-PoppinsE rounded-full mx-5 my-3"
       >
       Send Message
       </button>

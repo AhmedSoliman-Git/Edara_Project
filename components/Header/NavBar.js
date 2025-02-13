@@ -6,13 +6,18 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Logo from "../../public/photos/Erada.png";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { BsXLg } from "react-icons/bs";
 
 export default function NavBar() {
   const headerRef = useRef();
   const t = useTranslations("NavBar");
   const path = usePathname();
-
+  const [initailState, setInitalState] = useState(false);
+  let sideNav =
+    " absolute z-[99999] transition duration-300 -translate-y-full w-full h-screen bg-black text-center flex items-center justify-center";
+  let rotateItem =
+    "w-8 h-8 font-Bubble font-bold text-xl text-center rounded-full border transition duration-300 bg-neutral-800";
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 100) {
@@ -21,13 +26,21 @@ export default function NavBar() {
         headerRef.current.style.backgroundColor = "transparent";
       }
     };
-
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  function changeClass() {
+    setInitalState((prev) => !prev);
+  }
+  if (initailState) {
+    sideNav =
+      " fixed translate-y-0 delay-500 z-[99999] transition duration-300 w-full h-screen bg-black text-center flex items-center justify-center";
+    rotateItem = rotateItem + " rotate-90";
+  }
 
   return (
     <>
@@ -81,53 +94,94 @@ export default function NavBar() {
             </li>
           </ul>
         </nav>
+
+        <div
+          className="lg:hidden cursor-pointer delay bg-neutral-900 text-white w-[10rem] h-12 rounded-full items-center justify-around flex border"
+          onClick={changeClass}
+        >
+          <p className="mx-3 font-RedGlass">Menu</p>
+          <p className={rotateItem}>:</p>
+        </div>
       </header>
 
-      {/* <div className={classes.sideNav}>
-        <nav>
+      {/* //######################################################################## */}
+      <div className={sideNav}>
+        <nav className="relative">
+          <p
+            className="text-3xl text-[#e0b472] absolute right-0 -top-20 hover:text-white duration-300 cursor-pointer"
+            onClick={changeClass}
+          >
+            <BsXLg />
+          </p>
           <ul
             className={path.includes("ar") ? classes.replaceClass : undefined}
           >
             <li
               className={
-                path == "/ar" || path == "/en" ? classes.active : undefined
+                path == "/ar" || path == "/en"
+                  ? classes.SideAvtive
+                  : classes.Side
               }
             >
-              <Link href="/">{t("home")}</Link>
+              <Link
+                onClick={changeClass}
+                href="/"
+                className="text-4xl md:text-8xl text-[#e0b472] font-Azonix"
+              >
+                {t("home")}
+              </Link>
             </li>
 
             <li
               className={
                 path.includes("/services") || path.includes("/%D8%A7%D9%84")
-                  ? classes.active
-                  : undefined
+                  ? classes.SideAvtive
+                  : classes.Side
               }
             >
-              <Link href="/services">{t("services")}</Link>
+              <Link
+                onClick={changeClass}
+                href="/services"
+                className="text-4xl md:text-8xl text-[#e0b472] font-Azonix "
+              >
+                {t("services")}
+              </Link>
             </li>
 
             <li
               className={
                 path.includes("/aboutUs") || path.includes("/%D9%85%D8%A7")
-                  ? classes.active
-                  : undefined
+                  ? classes.SideAvtive
+                  : classes.Side
               }
             >
-              <Link href="/aboutUs">{t("about_us")}</Link>
+              <Link
+                onClick={changeClass}
+                href="/aboutUs"
+                className="text-4xl md:text-8xl text-[#e0b472] font-Azonix"
+              >
+                {t("about_us")}
+              </Link>
             </li>
 
             <li
               className={
                 path.includes("/Help") || path.includes("/%D9%85%D8%B3")
-                  ? classes.active
-                  : undefined
+                  ? classes.SideAvtive
+                  : classes.Side
               }
             >
-              <Link href="/help">{t("help")}</Link>
+              <Link
+                onClick={changeClass}
+                href="/help"
+                className="text-4xl md:text-8xl text-[#e0b472] font-Azonix"
+              >
+                {t("help")}
+              </Link>
             </li>
           </ul>
         </nav>
-      </div> */}
+      </div>
     </>
   );
 }

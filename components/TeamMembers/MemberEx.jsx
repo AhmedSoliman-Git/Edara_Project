@@ -37,26 +37,28 @@ export default function MemberEx({ params }) {
 
             <div>
               <h1 className="text-3xl font-PlatNomor my-3">Worked In : </h1>
-              <ul>
+              <div>
                 {TeamData[params].Experience.map((item) => (
-                  <div>
+                  <div key={item.CompanyName}>
                     <h1 className=" text-[1rem] lg:text-lg xl:text-xl font-bold font-PoppinsM my-2">
                       {item.CompanyName}
                     </h1>
-                    {item.Position.map((positionItem) => {
-                      return (
-                        <li
-                          key={item.title}
-                          className=" text-[sm] mb-[0.5rem] md:mb-0 xl:text-lg font-PoppinsM hover:translate-x-4 hover:text-amber-600 duration-200 border-b max-w-max border-black pb-1"
-                        >
-                          <span>{positionItem.PositionDate}</span>{" "}
-                          <span>{positionItem.PostionName}</span>
-                        </li>
-                      );
-                    })}
+                    <ul>
+                      {item.Position.map((positionItem) => {
+                        return (
+                          <li
+                            key={item.title}
+                            className=" text-[sm] mb-[0.5rem] md:mb-0 xl:text-lg font-PoppinsM hover:translate-x-4 hover:text-amber-600 duration-200 border-b max-w-max border-black pb-1"
+                          >
+                            <span>{positionItem.PositionDate}</span>{" "}
+                            <span>{positionItem.PostionName}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
                 ))}
-              </ul>
+              </div>
               <h1 className="text-3xl font-PlatNomor my-3">Education: </h1>
               <ul className="flex justify-start items-center">
                 <li className=" text-[1rem] xl:text-lg font-PoppinsM hover:translate-x-4 hover:text-amber-600 duration-200 border-b max-w-max border-black pb-1">
@@ -103,11 +105,11 @@ export default function MemberEx({ params }) {
           {TeamData[params].Certifications !== null ? (
             <div className="flex w-full overflow-scroll bg-black gap-4">
               {TeamData[params].Certifications.map((item) => (
-                  <Image
-                    className="w-full h-[40vh] xl:h-[80vh] object-contain"
-                    src={item.image1}
-                    alt="Certification"
-                  />
+                <Image
+                  className="w-full h-[40vh] xl:h-[80vh] object-contain"
+                  src={item.image1}
+                  alt="Certification"
+                />
               ))}
             </div>
           ) : (

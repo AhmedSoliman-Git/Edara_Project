@@ -23,6 +23,7 @@ export default function Services() {
           classes={hClass}
         />
 
+
         <div className="my-20 p-8">
           <Paragraph
             additionalText="Projects"
@@ -32,7 +33,7 @@ export default function Services() {
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 p-5 bg-neutral-200 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 p-5 bg-neutral-200 gap-5">
           <ProjectItem
             projectImage={image3}
             pText="Arabah Abu El-Dahab Wastewater Treatment Plant"

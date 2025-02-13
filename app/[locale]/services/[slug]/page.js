@@ -3,7 +3,7 @@ import Footer from "../../../../components/PageContent/Footer/Footer";
 import ProjectDetails from "../../../../components/Projects/ProjectDetails";
 import img from "../../../../public/photos/Page_otherPages/Projects.jpg";
 export default async function page({ params }) {
-  const hClass = "heading text-8xl hover:text-blue-500 font-Azonix";
+  const hClass = " hover:text-blue-500";
   const data = await params.slug;
   return (
     <section>
