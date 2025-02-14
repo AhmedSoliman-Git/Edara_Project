@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
-import { Link } from "../../i18n/routing"
+import { Link } from "../../i18n/routing";
 import first from "../../public/photos/water2.jpg";
 import second from "../../public/photos/water3.jpg";
 import third from "../../public/photos/build1.jpg";
@@ -59,13 +59,13 @@ export default function Carosel() {
       }, 2500);
   }, [slide]);
 
-  let classes =
+  let SliderClass =
     "z-20 w-full flex md:flex flex-row-reverse justify-around absolute top-1/2 selection:bg-[#e0b472] selection:text-white";
   let contentClass =
     "font-arab w-[60%] md:w-[600px] md:flex flex-col selection:bg-[#e0b472] selection:text-white text-right";
 
   if (!path.includes("ar")) {
-    classes =
+    SliderClass =
       "z-20 w-full flex md:flex flex-row justify-around absolute top-1/2 selection:bg-[#e0b472] selection:text-white";
     contentClass =
       "font-Azonix w-[60%] md:w-[600px] md:flex flex-col selection:bg-[#e0b472] selection:text-white text-left leading-l";
@@ -100,7 +100,7 @@ export default function Carosel() {
               />
             );
           })}
-          <div className={classes}>
+          <div className={SliderClass}>
             <div className={contentClass + " w-[80%]"}>
               <h1 className="leading-tight text-2xl sm:text-5xl text-[#e0b472] mb-2 font-bold md:text-5xl md:leading-tight md:font-bold md:mb-5">
                 {t("HEAD")}

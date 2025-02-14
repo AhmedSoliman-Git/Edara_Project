@@ -17,7 +17,7 @@ export default function NavBar() {
   let sideNav =
     " absolute z-[99999] transition duration-300 -translate-y-full w-full h-screen bg-black text-center flex items-center justify-center";
   let rotateItem =
-    "w-8 h-8 font-Bubble font-bold text-xl text-center rounded-full border transition duration-300 bg-neutral-800";
+    "w-8 h-8 font-Bubble delay-300 font-bold text-xl text-center rounded-full border transition duration-300 bg-neutral-800";
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 100) {
@@ -26,7 +26,8 @@ export default function NavBar() {
         headerRef.current.style.backgroundColor = "transparent";
       }
     };
-    if (typeof window !== "undefined") window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined")
+      window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -96,7 +97,7 @@ export default function NavBar() {
         </nav>
 
         <div
-          className="lg:hidden cursor-pointer delay bg-neutral-900 text-white w-[10rem] h-12 rounded-full items-center justify-around flex border"
+          className="lg:hidden cursor-pointer bg-neutral-900 text-white w-[10rem] h-12 rounded-full items-center justify-around flex border"
           onClick={changeClass}
         >
           <p className="mx-3 font-RedGlass">Menu</p>
@@ -178,6 +179,9 @@ export default function NavBar() {
               >
                 {t("help")}
               </Link>
+            </li>
+            <li className="listIcon">
+              <LocaleSwitcher />
             </li>
           </ul>
         </nav>

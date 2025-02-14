@@ -1,11 +1,14 @@
 "use client";
 import Image from "next/image";
-import { Projects } from "../ProjectData";
+import Projects from "../ProjectData";
 import { useState } from "react";
 import { Link } from "../../i18n/routing";
+import { usePathname } from "next/navigation";
 
 export default function ProjectDetails({ data }) {
-  const [initialImage, setImage] = useState(Projects[data].images[0]);
+  const ProjectsData = Projects();
+  const [initialImage, setImage] = useState(ProjectsData[data].images[0]);
+  const path = usePathname();
   function changeItem(value) {
     setImage(value);
   }
@@ -19,6 +22,14 @@ export default function ProjectDetails({ data }) {
 
   ProjectTitles = ProjectTitles.filter((el) => el !== data);
   ProjectLinks = ProjectLinks.filter((el) => !el.includes(data));
+
+  let divClass =
+    "w-full lg:w-1/2 border font-PoppinsM border-[#e0b472] p-5 rounded-xl";
+  if (path.includes("ar")) {
+    divClass =
+      "w-full lg:w-1/2 text-lg font-bold text-right border font-arab border-[#e0b472] p-5 rounded-xl";
+  }
+
   return (
     <>
       <div className="mt-20 gap-9 block lg:flex items-center p-5">
@@ -29,7 +40,7 @@ export default function ProjectDetails({ data }) {
             alt="item-image"
           />
           <div className="flex justify-between my-5 items-center gap-2">
-            {Projects[data].images.map((img, imgIndex) => (
+            {ProjectsData[data].images.map((img, imgIndex) => (
               <div
                 key={imgIndex}
                 className="border border-[#e0b472] p-1 cursor-pointer"
@@ -47,34 +58,30 @@ export default function ProjectDetails({ data }) {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 border border-[#e0b472] p-5 rounded-xl">
-          <h1 className="text-lg text-font-PoppinsM lg:text-xl xl:text-3xl">
-            {Projects[data].stationName}
+        <div className={divClass}>
+          <h1 className="text-lg lg:text-xl xl:text-3xl">
+            {ProjectsData[data].stationName}
           </h1>
 
-          {Projects[data].description.DesignCapacity == null ? null : (
-            <h1 className="xl:text-3xl font-PoppinsM md:text-lg">
-              Design Capacity :{" "}
-            </h1>
+          {ProjectsData[data].description.DesignCapacity == null ? null : (
+            <h1 className="xl:text-3xl md:text-lg">{ProjectsData.dC} </h1>
           )}
           <p className="text-[1rem] font-PoppinsE my-3 lg:text-[1rem]">
-            {Projects[data].description.DesignCapacity}
+            {ProjectsData[data].description.DesignCapacity}
           </p>
 
-          {Projects[data].description.TotalCost == null ? null : (
-            <h1 className="xl:text-3xl font-PoppinsM md:text-lg">
-              Cost Etamition :{" "}
-            </h1>
+          {ProjectsData[data].description.TotalCost == null ? null : (
+            <h1 className="xl:text-3xl md:text-lg">{ProjectsData.cost} </h1>
           )}
           <p className="text-[1rem] font-PoppinsE my-3 lg:text-[1rem]">
-            {Projects[data].description.TotalCost}
+            {ProjectsData[data].description.TotalCost}
           </p>
           <ul>
-            <h1 className="xl:text-3xl font-PoppinsM md:text-lg">Our Work : </h1>
-            {Projects[data].description.workInIt.map((item, itemIndex) => {
+            <h1 className="xl:text-3xl  md:text-lg">{ProjectsData.work}</h1>
+            {ProjectsData[data].description.workInIt.map((item, itemIndex) => {
               return (
                 <li key={itemIndex}>
-                  <p className="text-[0.9rem] lg:text-[1rem]xl:text-lg font-PoppinsM py-1 ">
+                  <p className="text-[0.9rem] lg:text-[1rem]xl:text-lg  py-1 ">
                     🔹{item}
                   </p>
                 </li>
@@ -88,7 +95,7 @@ export default function ProjectDetails({ data }) {
           return (
             <p key={elIndex}>
               <Link
-                className=" px-4 py-1 md:px-8 md:py-2 md:text-lg font-PoppinsM bg-neutral-900 text-white mx-3 border-4 border-[#e0b472] hover:bg-neutral-800"
+                className=" px-4 py-1 md:px-8 md:py-2 md:text-lg bg-neutral-900 text-white mx-3 border-4 border-[#e0b472] hover:bg-neutral-800"
                 href={ProjectLinks[elIndex]}
               >
                 {el}

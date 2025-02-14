@@ -2,18 +2,22 @@ import PageBanner from "../../../../components/PageBanner";
 import Footer from "../../../../components/PageContent/Footer/Footer";
 import ProjectDetails from "../../../../components/Projects/ProjectDetails";
 import img from "../../../../public/photos/Page_otherPages/Projects.jpg";
-export default async function page({ params }) {
+ import {useTranslations} from "next-intl";
+
+export default function page({ params }) {
   const hClass = " hover:text-blue-500";
-  const data = await params.slug;
+  const data = params.slug;
+  const t = useTranslations("Projects");
+
   return (
     <section>
-        <PageBanner
-          img={img}
-          text="Projects"
-          id="#projects"
-          alt="Projects"
-          classes={hClass}
-        />
+      <PageBanner
+        img={img}
+        text={t("projectTitle")}
+        id="#projects"
+        alt="Projects"
+        classes={hClass}
+      />
       <ProjectDetails data={data} />
       <Footer />
     </section>

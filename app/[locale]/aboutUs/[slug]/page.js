@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
 import PageBanner from "../../../../components/PageBanner";
 import Img from "../../../../public/photos/Page_otherPages/Experience.jpg";
-import Paragraph from "../../../../components/TeamMembers/DynamicParagraph";
 import MemberEx from "../../../../components/TeamMembers/MemberEx";
 import Footer from "../../../../components/PageContent/Footer/Footer";
-export default async function TeamMemberData({ params }) {
+import { useTranslations } from "next-intl";
+export default  function TeamMemberData({ params }) {
   let content;
   let BannerHeading = " hover:text-[#e0b472]";
-
-  const slugParam = await params;
+  const t = useTranslations("About");
+  const slugParam =  params;
   if (
     slugParam.slug == "EngWael" ||
     slugParam.slug == "EngMohamed" ||
@@ -19,7 +19,7 @@ export default async function TeamMemberData({ params }) {
       <section>
         <PageBanner
           img={Img}
-          text="Experience"
+          text={t("Experience")}
           id="#myDiv"
           alt="Experience"
           classes={BannerHeading}
