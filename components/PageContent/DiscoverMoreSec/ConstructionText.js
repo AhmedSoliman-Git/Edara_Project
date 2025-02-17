@@ -19,7 +19,7 @@ export default function ConstructionText() {
 
   return (
     <>
-      <div className="bg-black  block md:flex sm:items-center gap-10 relative">
+      <div className="bg-black  block md:flex sm:items-center gap-10 relative" id="CaroselBtn">
         <div className="autor">
           <Image src={build} width={600} alt="building" className="w-full  object-cover" loading="lazy" />
         </div>

@@ -1,32 +1,57 @@
+"use client";
 import PageBanner from "../../../components/PageBanner";
 import img from "../../../public/photos/Page_otherPages/contact.jpg";
 import Link from "next/link";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { PiPhoneCallBold } from "react-icons/pi";
 import { GrMapLocation } from "react-icons/gr";
-// import Paragraph from "../../../components/TeamMembers/DynamicParagraph";
 import Footer from "../../../components/PageContent/Footer/Footer";
 import FormSend from "../../../components/FormElements/Form";
 import StaticP from "../../../components/TeamMembers/StaticP";
-
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 export default function Help() {
-  let ParagraphText =
-    "Get to know the exceptional team at New West Building Company, who drive excellence in construction through industry-leading talent development, core collaboration, innovative solutions.";
-  let hClass = "text-5xl font-PlatNomor border-b-2 border-black pb-2";
+  const t = useTranslations("ContactMain");
+  const path = usePathname();
   let BannerHeading = " hover:text-neutral-900 font-Azonix";
+  let getTouch = "font-PoppinsM text-lg text-bold";
+  let heading1 = "font-bold font-PoppinsE text-lg md:text-3xl xl:text-4xl py-3";
+  let trycontent =
+    "flex justify-center items-center text-lg lg:text-2xl font-RedGlass border rounded-md";
+  let ulClass = "bg-slate-100 p-4 rounded-md font-PoppinsM";
+  let divClass =
+    "grid grid-cols-1 xl:grid-cols-2 rounded-2xl xl:p-8 gap-3 font-PoppinsM";
+  let liClass = "font-bold text-xl  flex justify-start gap-3 items-center";
+  let h2Class = "text-3xl font-PoppinsE my-3 text-center sm:text-start";
+  let pClass =
+    "text-lg md:text-2xl my-3 font-PoppinsE text-center sm:text-start";
+  if (path.includes("ar")) {
+    getTouch = "font-arab text-lg text-bold text-right";
+    heading1 =
+      "font-bold font-arab text-lg md:text-3xl xl:text-4xl py-3 text-right";
+    trycontent =
+      "flex justify-center items-center text-lg lg:text-2xl font-arab border rounded-md";
+    ulClass = "bg-slate-100 p-4 rounded-md font-arab text-right";
+    divClass =
+      "grid grid-cols-1 xl:grid-cols-2 rounded-2xl xl:p-8 gap-3 font-arab text-right";
+    liClass = "font-bold text-xl  flex justify-end gap-3 items-center";
+    h2Class = "text-3xl font-semibold my-3 text-center sm:text-end font-arab";
+    pClass = "text-lg font-semibold my-3 text-center sm:text-end font-arab";
+  }
+
   return (
     <section>
       <PageBanner
         img={img}
-        text="Contact Us"
+        text={t("H")}
         id="#myDiv"
         alt="contact-Us"
         classes={BannerHeading}
       />
       <div className="my-20 p-8">
         <StaticP
-          additionalText="Contact Us"
-          text={ParagraphText}
+          additionalText={t("H")}
+          text={t("P")}
           classes="text-xl font-PoppinsE w-2/3"
         />
       </div>
@@ -36,45 +61,44 @@ export default function Help() {
         className="p-2 grid xl:grid-cols-2 mt-20 md:p-4 w-full lg:w-[80%] md:gap-11 items-center rounded-tr-none rounded-tl-none m-auto bg-neutral-200 md:rounded-tr-full md:rounded-tl-full"
       >
         <div>
-          <span className="font-PoppinsM text-lg text-bold">Get in Touch</span>
-          <h1 className="font-bold font-PoppinsE text-lg md:text-3xl xl:text-4xl py-3">
-            We are always ready to Help you and answer your questions
-          </h1>
-          <div className="grid grid-cols-1 xl:grid-cols-2 rounded-2xl xl:p-8 gap-3">
-            <h1 className="flex justify-center items-center text-lg lg:text-2xl font-RedGlass border rounded-md">
-              Try to Contact us
-            </h1>
-            <div className="text-left">
-              <ul className="bg-slate-100 p-4 rounded-md">
-                <li className="font-semibold text-lg md:text-xl font-PoppinsE flex justify-start gap-3 items-center">
-                  Our Phones
+          <span className={getTouch}>{t("get")}</span>
+          <h1 className={heading1}>{t("help")}</h1>
+          <div className={divClass}>
+            <h1 className={trycontent}>{t("try")}</h1>
+            <div>
+              <ul className={ulClass}>
+                <li className={liClass}>
+                  {t("phones")}
                   <PiPhoneCallBold />
                 </li>
-                <li className="text-lg font-bold sm:font-normal font-PoppinsE">
+                <li className="text-lg font-bold sm:font-normal ">
                   +20 100 975 6488
                 </li>
-                <li className="text-lg font-bold sm:font-normal font-PoppinsE">
+                <li className="text-lg font-bold sm:font-normal">
                   +20 100 6744209
                 </li>
-                <li className="text-lg font-bold sm:font-normal font-PoppinsE">
+                <li className="text-lg font-bold sm:font-normal">
                   +20 122 158 9595
                 </li>
-                <li className="text-lg font-bold sm:font-normal font-PoppinsE">
+                <li className="text-lg font-bold sm:font-normal">
+                  +20 111 118 8528
+                </li>
+                <li className="text-lg font-bold sm:font-normal">
                   048/3352105
                 </li>
-                <li className="text-lg font-bold sm:font-normal font-PoppinsE">
+                <li className="text-lg font-bold sm:font-normal">
                   048/3356968
                 </li>
               </ul>
             </div>
 
-            <div className="text-left">
+            <div>
               <ul className="bg-slate-100 p-4 rounded-md">
-                <li className="text-xl font-PoppinsE flex justify-start gap-3 items-center">
-                  Our Emails
+                <li className={liClass}>
+                  {t("email")}
                   <MdOutlineAlternateEmail />
                 </li>
-                <li className="text-lg font-PoppinsE text-blue-700">
+                <li className="text-lg text-blue-700">
                   <Link href="mailto:erada.ce@gmail.com">
                     erada.ce@gmail.com{" "}
                   </Link>
@@ -82,32 +106,25 @@ export default function Help() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div>
               <ul className="bg-slate-100 p-4 rounded-md">
-                <li className="text-xl font-PoppinsE flex justify-start gap-3 items-center">
-                  Location
+                <li className={liClass}>
+                  {t("location")}
                   <GrMapLocation />
                 </li>{" "}
-                <li className="text-lg font-PoppinsE">
-                  Menofia / Sirs-El-layan{" "}
-                </li>
-                <li className="text-lg font-PoppinsE">
-                  Ali-Ebn-AbiTaleb Street
-                </li>
+                <li className="text-lg ">{t("l1")} </li>
+                <li className="text-lg ">{t("l2")} </li>
+                <li className="text-lg ">{t("l3")} </li>
               </ul>
             </div>
           </div>
         </div>
 
         <div>
-          <h1 className="text-3xl font-PoppinsM my-3 text-center sm:text-start">
-            Get In Touch
-          </h1>
-          <p className="font-PoppinsE font-2xl my-3 text-center sm:text-start">
-            Define your goals and indentity areas ..
-          </p>
+          <h1 className={h2Class}>{t("try")}</h1>
+          <p className={pClass}>{t("def")} </p>
           <div>
-            <FormSend />
+            <FormSend text={t("send")} />
           </div>
         </div>
       </div>

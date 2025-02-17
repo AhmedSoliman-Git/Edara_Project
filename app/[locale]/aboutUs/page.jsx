@@ -1,7 +1,5 @@
 import img from "../../../public/photos/Page_otherPages/About.jpg";
-import { AiOutlinePlus } from "react-icons/ai";
-import Lines from "../../../components/PageContent/Lines/ssLines";
-import Paragraph from "../../../components/TeamMembers/DynamicParagraph";
+import Lines from "../../../components/PageContent/Lines/SSLines";
 import TeamMember from "../../../components/TeamMembers/TeamMember";
 import Image1 from "../../../public/photos/Page_otherPages/team/EngWeal.jpeg";
 import Image2 from "../../../public/photos/Page_otherPages/team/EngMo.jpeg";
@@ -67,7 +65,6 @@ export default function About() {
           />
         </div>
       </div>
-
 
       <Footer />
     </section>

@@ -7,19 +7,20 @@ import MainImg2 from "../public/photos/Page_otherPages/team/aYehia.jpeg";
 import MainImg3 from "../public/photos/Page_otherPages/team/EngWeal.jpeg";
 import MainImg4 from "../public/photos/Page_otherPages/team/MrDaw.jpeg";
 
-import React from "react";
 import { useTranslations } from "next-intl";
 
 export default function TeamData() {
   const tB = useTranslations("Bogdady");
   const tA = useTranslations("AhmedYehia");
+  const tW = useTranslations("Wael");
+  const tD = useTranslations("Dawood")
   const TeamData = {
     EngMohamed: {
       Education: tB("Education"),
       MainImg: MainImg,
       title: tB("title"),
       name: tB("name"),
-      description: tB("baragraph"),
+      description: tB("paragraph"),
       Experience: [
         {
           CompanyName: tB("CompanyName"),
@@ -91,7 +92,7 @@ export default function TeamData() {
       MainImg: MainImg2,
       title: tA("title"),
       name: tA("name"),
-      description: tA("baragraph"),
+      description: tA("paragraph"),
       Experience: [
         {
           CompanyName: tA("CompanyName"),
@@ -116,41 +117,68 @@ export default function TeamData() {
         },
       ],
       Certifications: null,
-      Courses: [tA("Course1") ,tA("Course2")],
+      Courses: [tA("Course1"), tA("Course2")],
     },
     //#######################################################################
     EngWael: {
       MainImg: MainImg3,
-      title: "Engineer",
-      name: "Wael Belal",
-      Education: "Bachelor Degree in Electrical Engineering",
-      description:
-        "Engineer Wael Belal is a dedicated and skilled professional with expertise in [his specific field, e.g., electrical, mechanical, civil, etc.]. With a strong background in [mention key areas, e.g., project management, design, implementation, etc.], he has successfully contributed to [mention notable projects or achievements]. Known for his attention to detail, problem-solving abilities, and commitment to excellence, Eng. Wael Belal is a respected figure in his field.",
+      title: tW("title"),
+      name: tW("name"),
+      Education: tW("Education"),
+      description: tW("paragraph"),
       Experience: [
         {
-          CompanyName: "AL SHROUK GENERAL CONTRACTING",
+          CompanyName: tW("CompanyName"),
           Position: [
             {
-              PostionName: "Site Civil Engineer",
-              PositionDate: "(April 2021 - August 2021)",
-            },
-            {
-              PostionName: "Site Civil Engineer",
-              PositionDate: "(December 2020 - March 2021)",
-            },
-            {
-              PostionName: "Site Civil Engineer",
-              PositionDate: "(June 2018 - November 2020)",
+              PostionName: tW("PositionName1"),
+              PositionDate: tW("PositionDate1"),
             },
           ],
-          projects: [
-            "🔹Beni Suef: Wastewater lifting stations in Bani Haroun and Al-Kom Al-Ahmar villages.",
-            "🔹Sohag: Wastewater lifting stations in Arabah Abu Al-Dahab, Al-Baytag, and Abu Aziz villages.",
-            "🔹General Projects: Water desalination plants, fuel stations.",
-            "🔹Extensive experience in electrical engineering for over 15 years.",
-            "🔹Worked on large-scale government projects.",
-            "🔹Installation of electrical transformers.",
+          projects: [tW("Project1")],
+        },
+        
+        {
+          CompanyName: tW("CompanyName2"),
+          Position: [
+            {
+              PostionName: tW("PositionName2"),
+              PositionDate: tW("PositionDate2"),
+            },
           ],
+          projects: [tW("Project2")],
+        },
+
+        {
+          CompanyName: tW("CompanyName3"),
+          Position: [
+            {
+              PostionName: tW("PositionName3"),
+              PositionDate: tW("PositionDate3"),
+            },
+          ],
+          projects: [tW("Project3")],
+        },
+
+        {
+          CompanyName: tW("CompanyName4"),
+          Position: [
+            {
+              PostionName: tW("PositionName4"),
+              PositionDate: tW("PositionDate4"),
+            },
+          ],
+          projects: [null],
+        },
+        {
+          CompanyName: tW("CompanyName5"),
+          Position: [
+            {
+              PostionName: tW("PositionName5"),
+              PositionDate: tW("PositionDate5"),
+            },
+          ],
+          projects: [tW("Project4")],
         },
       ],
       Certifications: null,
@@ -159,93 +187,34 @@ export default function TeamData() {
     //#######################################################################
     MrMohamed: {
       MainImg: MainImg4,
-      title: "Engineer",
-      name: "Mohamed Elbogdady",
-      description:
-        "Civil engineer hava lot of works in all time did alot in Work in Arabi construction works 10 years in with heavy experience",
+      title: tD("title"),
+      name: tD("MyNAME"),
+      description:tD("paragraph"),
       Experience: [
         {
-          CompanyName: "OBAID AL ABDI MAINTENANCE AND DÉCOR (UAE)",
+          CompanyName: tD("CompanyName"),
           Position: [
             {
-              PostionName: "Senior Project Engineer",
-              PositionDate: "(November 2023 - Present)",
-            },
-            {
-              PostionName: "Project Manager",
-              PositionDate: "(November 2023 - Present)",
-            },
+              PostionName: tD("PositionName1"),
+              PositionDate: tD("PositionDate1"),
+            }
           ],
-          projects: [
-            " Al Jada Site",
-            "Wasel Tower",
-            "Murooj Alfurjan",
-            "Telal Alfurjan",
-          ],
+          projects: [null],
         },
         {
-          CompanyName: " OBAID ALABDI CONTRACTING LLC (UAE)",
+          CompanyName: tD("CompanyName2"),
           Position: [
             {
-              PostionName: "Senior Project Engineer",
-              PositionDate: "(March 2023 - October 2023)",
-            },
-            {
-              PostionName: "Senior Project Engineer",
-              PositionDate: "(July 2022 - February 2023)",
-            },
-            {
-              PostionName: "Project Engineer",
-              PositionDate: "(August 2021 - June 2022)",
+              PostionName: tD("PositionName2"),
+              PositionDate:tD("PositionDate2") ,
             },
           ],
-          projects: [
-            "Family Park 6",
-            "Municipality Labour Camp",
-            "Weapons and Ammunition Depot",
-          ],
-        },
-        {
-          CompanyName: "AL SHROUK GENERAL CONTRACTING",
-          Position: [
-            {
-              PostionName: "Site Civil Engineer",
-              PositionDate: "(April 2021 - August 2021)",
-            },
-            {
-              PostionName: "Site Civil Engineer",
-              PositionDate: "(December 2020 - March 2021)",
-            },
-            {
-              PostionName: "Site Civil Engineer",
-              PositionDate: "(June 2018 - November 2020)",
-            },
-          ],
-          projects: [
-            "Assiut National University",
-            "Algalala Coastal Resort",
-            "Egyptian Japanese University",
-          ],
+          projects: [null],
+
         },
       ],
-      Certifications: [
-        {
-          image1: image1,
-          ImageDescreption: "Design Diploma",
-        },
-        {
-          image1: image1,
-          ImageDescreption: "Design Diploma",
-        },
-        {
-          image1: image1,
-          ImageDescreption: "Design Diploma",
-        },
-        {
-          image1: image1,
-          ImageDescreption: "Design Diploma",
-        },
-      ],
+      Certifications: null,
+      Courses: [null],
     },
   };
   return TeamData;

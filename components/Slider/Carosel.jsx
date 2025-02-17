@@ -110,13 +110,13 @@ export default function Carosel() {
               </h5>
               <div className="space-x-3 text-white flex">
                 <Link
-                  href="/"
+                  href="/help"
                   className=" btn w-1/2 text-center font-bold  py-3 sm:px-10 sm:py-2 md:px-10 md:py-5 rounded-xl border cursor-pointer shadow-lg md:font-medium md:text-2xl duration-200"
                 >
                   {t("btn1")}
                 </Link>
                 <Link
-                  href="/"
+                  href="#CaroselBtn"
                   className="btn w-1/2 text-center font-bold  py-3 sm:px-10 sm:py-2 md:px-10 md:py-5 rounded-xl border cursor-pointer shadow-lg md:font-medium md:text-2xl  duration-200"
                 >
                   {t("btn2")}

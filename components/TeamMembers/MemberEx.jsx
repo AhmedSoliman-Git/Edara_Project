@@ -79,7 +79,9 @@ export default function MemberEx({ params }) {
         </div>
 
         <div>
-          <h1 className="text-3xl my-6">{t("Projects")}</h1>
+          {TeamDetailsData[params].Experience[0].projects[0] !== null ? (
+            <h1 className="text-3xl my-6">{t("Projects")}</h1>
+          ) : null}
 
           <div>
             <ul>

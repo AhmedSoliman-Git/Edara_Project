@@ -30,7 +30,7 @@ export default function TeamMember({ imgSrc, text, nickname, name, Mypath }) {
         <span className={sp}>{nickname}  </span>
         <h2 className={hName}>{name}</h2>
         <div className={dRev}>
-          <p className={pText}>{text}</p>
+          <p className={pText + " h-[7vh] md:h-[4vh]"}>{text}</p>
           <Link href={Mypath} alt="CLICK HERE">
             <AiOutlinePlus className="m-2 text-3xl cursor-pointer text-orange-500 p-1 border rounded-lg duration-300 hover:bg-black hover:text-white "/>
           </Link>

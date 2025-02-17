@@ -14,10 +14,17 @@ export default function NavBar() {
   const t = useTranslations("NavBar");
   const path = usePathname();
   const [initailState, setInitalState] = useState(false);
+  let menu = "mx-3 font-RedGlass";
   let sideNav =
-    " absolute z-[99999] transition duration-300 -translate-y-full w-full h-screen bg-black text-center flex items-center justify-center";
+    "fixed z-[99999] transition duration-300 w-full h-screen bg-black text-center flex items-center justify-center -translate-y-full";
   let rotateItem =
     "w-8 h-8 font-Bubble delay-300 font-bold text-xl text-center rounded-full border transition duration-300 bg-neutral-800";
+  let font = " font-Azonix";
+  if (path.includes("ar")) {
+    menu = "mx-3 font-arab";
+    font = " font-arab";
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 100) {
@@ -39,7 +46,7 @@ export default function NavBar() {
   }
   if (initailState) {
     sideNav =
-      " fixed translate-y-0 delay-500 z-[99999] transition duration-300 w-full h-screen bg-black text-center flex items-center justify-center";
+      "fixed translate-y-0 delay-500 z-[99999] transition duration-300 w-full h-screen bg-black text-center flex items-center justify-center";
     rotateItem = rotateItem + " rotate-90";
   }
 
@@ -47,7 +54,9 @@ export default function NavBar() {
     <>
       <header className={classes.header + " font-arab"} ref={headerRef}>
         <div className={classes.letters}>
-          <Image src={Logo} width={200} height={200} priority alt="Logo" />
+          <Link href="/">
+            <Image src={Logo} width={200} height={200} priority alt="Logo" />
+          </Link>
         </div>
         <nav className={classes.nav}>
           <ul
@@ -100,13 +109,13 @@ export default function NavBar() {
           className="lg:hidden cursor-pointer bg-neutral-900 text-white w-[10rem] h-12 rounded-full items-center justify-around flex border"
           onClick={changeClass}
         >
-          <p className="mx-3 font-RedGlass">Menu</p>
+          <p className={menu}>{t("menu")}</p>
           <p className={rotateItem}>:</p>
         </div>
       </header>
 
       {/* //######################################################################## */}
-      <div className={sideNav}>
+      <div className={sideNav + font}>
         <nav className="relative">
           <p
             className="text-3xl text-[#e0b472] absolute right-0 -top-20 hover:text-white duration-300 cursor-pointer"
@@ -127,7 +136,7 @@ export default function NavBar() {
               <Link
                 onClick={changeClass}
                 href="/"
-                className="text-4xl md:text-8xl text-[#e0b472] font-Azonix"
+                className="text-4xl md:text-8xl text-[#e0b472]"
               >
                 {t("home")}
               </Link>
@@ -143,7 +152,7 @@ export default function NavBar() {
               <Link
                 onClick={changeClass}
                 href="/services"
-                className="text-4xl md:text-8xl text-[#e0b472] font-Azonix "
+                className="text-4xl md:text-8xl text-[#e0b472]"
               >
                 {t("services")}
               </Link>
@@ -159,7 +168,7 @@ export default function NavBar() {
               <Link
                 onClick={changeClass}
                 href="/aboutUs"
-                className="text-4xl md:text-8xl text-[#e0b472] font-Azonix"
+                className="text-4xl md:text-8xl text-[#e0b472]"
               >
                 {t("about_us")}
               </Link>
@@ -175,7 +184,7 @@ export default function NavBar() {
               <Link
                 onClick={changeClass}
                 href="/help"
-                className="text-4xl md:text-8xl text-[#e0b472] font-Azonix"
+                className="text-4xl md:text-8xl text-[#e0b472]"
               >
                 {t("help")}
               </Link>
