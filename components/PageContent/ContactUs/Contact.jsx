@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "../../../i18n/routing";
 import { usePathname } from "next/navigation";
 
-export default function contact() {
+export default function Contact() {
   const t = useTranslations("Contact");
   const path = usePathname();
   let main_class = "text-3xl font-PlatNomor py-6";

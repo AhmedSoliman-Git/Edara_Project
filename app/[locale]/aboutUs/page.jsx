@@ -22,7 +22,7 @@ export default function About() {
         alt="About-Us"
         classes=" hover:text-amber-700"
       />
-      <Lines />
+      {/* <Lines /> */}
 
       <div>
         <div className="my-20 p-8">

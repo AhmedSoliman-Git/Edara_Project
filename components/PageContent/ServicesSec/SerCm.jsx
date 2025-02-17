@@ -10,7 +10,7 @@ import image6 from "../../../public/photos/Page Building/electric.jpg";
 import image7 from "../../../public/photos/Page Building/mep.jpeg";
 import Service from "./Service";
 
-export default function serCm() {
+export default function SerCm() {
   const t = useTranslations("SERVICES");
   const path = usePathname();
   let classes = "font-PoppinsE mb-5";
@@ -34,7 +34,6 @@ export default function serCm() {
       </div>
 
       <div className="grid grid-cols-1 p-0 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:p-24 mx-0 md:mx-10 mb-48 bg-[#efefef]">
-        {/* { srvImg, servicesText, pP, t1, t2, t3 } */}
         <Service
           alt="building drawing"
           srvImg={image1}
