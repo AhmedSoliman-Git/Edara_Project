@@ -1,4 +1,4 @@
-import Lines from "./Lines/SSLines";
+// import Lines from "./Lines/SSLines";
 import ConstructionText from "./DiscoverMoreSec/ConstructionText";
 import Idea from "./IdeasSec/Idea";
 import Services from "./ServicesSec/Services";
@@ -8,7 +8,7 @@ import Contact from "./ContactUs/Contact";
 export default function PageContent() {
   return (
     <main className="overflow-hidden">
-      <Lines />
+      {/* <Lines /> */}
       <ConstructionText />
       <Idea />
       <Services />
