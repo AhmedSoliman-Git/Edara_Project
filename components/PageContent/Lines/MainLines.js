@@ -2,6 +2,6 @@
 
 import dynamic from "next/dynamic";
 
-const Lines = dynamic(() => import('./Lines'), { ssr: false });
+const Lines = dynamic(() => import('./Lines.js'), { ssr: false });
 
 export default Lines;

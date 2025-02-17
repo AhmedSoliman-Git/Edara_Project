@@ -1,4 +1,4 @@
-import Lines from "./Lines/SSLines";
+import Lines from "./Lines/MainLines";
 import ConstructionText from "./DiscoverMoreSec/ConstructionText";
 import Idea from "./IdeasSec/Idea";
 import Services from "./ServicesSec/Services";
