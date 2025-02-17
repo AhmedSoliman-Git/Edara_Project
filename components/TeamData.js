@@ -5,7 +5,7 @@ import image3 from "../public/photos/Page_otherPages/team/Certicates/image.png";
 import MainImg from "../public/photos/Page_otherPages/team/EngMo.jpeg";
 import MainImg2 from "../public/photos/Page_otherPages/team/aYehia.jpeg";
 import MainImg3 from "../public/photos/Page_otherPages/team/EngWeal.jpeg";
-import MainImg4 from "../public/photos/Page_otherPages/team/MrDaw.jpeg";
+import MainImg4 from "../public/photos/Page_otherPages/team/MrMohamed.jpeg";
 
 import { useTranslations } from "next-intl";
 

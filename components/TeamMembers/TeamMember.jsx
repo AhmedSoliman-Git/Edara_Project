@@ -27,7 +27,7 @@ export default function TeamMember({ imgSrc, text, nickname, name, Mypath }) {
         alt="Team member"
       />
       <div className={dClass}>
-        <span className={sp}>{nickname}  </span>
+        <span className={sp}>{nickname}</span>
         <h2 className={hName}>{name}</h2>
         <div className={dRev}>
           <p className={pText + " h-[7vh] md:h-[4vh]"}>{text}</p>

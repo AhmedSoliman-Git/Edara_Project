@@ -1,5 +1,5 @@
 import img from "../../../public/photos/Page_otherPages/About.jpg";
-// import Lines from "../../../components/PageContent/Lines/SSLines";
+import Lines from "../../../components/PageContent/Lines/SSLines";
 import TeamMember from "../../../components/TeamMembers/TeamMember";
 import Image1 from "../../../public/photos/Page_otherPages/team/EngWeal.jpeg";
 import Image2 from "../../../public/photos/Page_otherPages/team/EngMo.jpeg";
@@ -22,7 +22,7 @@ export default function About() {
         alt="About-Us"
         classes=" hover:text-amber-700"
       />
-      {/* <Lines /> */}
+      <Lines />
 
       <div>
         <div className="my-20 p-8">
