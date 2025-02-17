@@ -15,7 +15,6 @@ import { CiTimer } from "react-icons/ci";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Benefits() {
-  //[#e0b472]
   const t = useTranslations("Benefits");
   const path = usePathname();
   let hClass = "font-PlatNomor text-2xl xl:text-3xl py-3";
@@ -53,10 +52,6 @@ export default function Benefits() {
     },
     { scope: secRef }
   );
-
-  //   if (path.includes("ar")) {
-  //   }
-
   return (
     <>
       <div className={benClass}>
