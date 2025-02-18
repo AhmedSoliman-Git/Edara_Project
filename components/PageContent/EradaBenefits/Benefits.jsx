@@ -58,7 +58,7 @@ export default function Benefits() {
         <h1 className="mb-3">{t("BENH")}</h1>
         <p className="w-1/3 font-bold bg-[#e0b472] h-2 m-auto"></p>
       </div>
-      <section className={classes}>
+      <section className={classes+ " serviceBg"}>
         <marquee className={marClass}>{t("BEN1")}</marquee>
 
         <div

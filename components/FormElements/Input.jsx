@@ -10,7 +10,7 @@ const Input = forwardRef(function Input(
       id={id}
       required
       placeholder={placeholder}
-      className="w-full py-3 px-4 my-1 outline-none bg-neutral-100"
+      className="w-full py-3 px-4 my-1 outline-none serviceItemBg"
       ref={ref}
       autoComplete="true"
       {...props}
@@ -24,7 +24,7 @@ const Input = forwardRef(function Input(
         id={id}
         placeholder={placeholder}
         required
-        className="w-full h-[30vh] py-3 px-4 my-1 outline-none bg-neutral-100"
+        className="w-full h-[30vh] py-3 px-4 my-1 outline-none serviceItemBg"
         ref={ref}
         autoComplete="true"
         {...props}

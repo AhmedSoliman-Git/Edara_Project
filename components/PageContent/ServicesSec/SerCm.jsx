@@ -33,7 +33,7 @@ export default function SerCm() {
         <p className="w-1/3 font-bold bg-[#e0b472] h-2 m-auto"></p>
       </div>
 
-      <div className="grid grid-cols-1 p-0 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:p-24 mx-0 md:mx-10 mb-48 bg-[#efefef]">
+      <div className="grid grid-cols-1 p-0 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:p-24 mx-0 md:mx-10 mb-48 serviceBg">
         <Service
           alt="building drawing"
           srvImg={image1}

@@ -21,18 +21,19 @@ export default function TeamMember({ imgSrc, text, nickname, name, Mypath }) {
   return (
     <div className="border-[0.3rem] border-[#e0b472]">
       <Image
-        className="w-full h-[50vh] md:h-[50vh] lg:h-[80vh] object-cover"
+        className="w-full h-[40vh] md:h-[50vh] lg:h-[80vh] object-cover"
         width={500}
         src={imgSrc}
         alt="Team member"
+        style={{objectPosition : "0 5%"}}
       />
-      <div className={dClass}>
+      <div className={dClass + " serviceItemBg"}>
         <span className={sp}>{nickname}</span>
         <h2 className={hName}>{name}</h2>
         <div className={dRev}>
           <p className={pText + " h-[7vh] md:h-[4vh]"}>{text}</p>
           <Link href={Mypath} alt="CLICK HERE">
-            <AiOutlinePlus className="m-2 text-3xl cursor-pointer text-orange-500 p-1 border rounded-lg duration-300 hover:bg-black hover:text-white "/>
+            <AiOutlinePlus className="m-2 text-3xl cursor-pointer  text-orange-500 p-1 border rounded-lg duration-300 hover:bg-orange-500 hover:text-white "/>
           </Link>
         </div>
       </div>

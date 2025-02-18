@@ -9,12 +9,15 @@ import Logo from "../../public/photos/Erada.png";
 import { useRef, useEffect, useState } from "react";
 import { BsXLg } from "react-icons/bs";
 
+
+
 export default function NavBar() {
   const headerRef = useRef();
   const t = useTranslations("NavBar");
   const path = usePathname();
   const [initailState, setInitalState] = useState(false);
   let menu = "mx-3 font-RedGlass";
+  let resText = "text-3xl md:text-6xl text-[#e0b472]";
   let sideNav =
     "fixed z-[99999] transition duration-300 w-full h-screen bg-black text-center flex items-center justify-center -translate-y-full";
   let rotateItem =
@@ -52,7 +55,7 @@ export default function NavBar() {
 
   return (
     <>
-      <header className={classes.header + " font-arab"} ref={headerRef}>
+      <header className={classes.header + " font-arab" } ref={headerRef}>
         <div className={classes.letters}>
           <Link href="/">
             <Image src={Logo} width={200} height={200} priority alt="Logo" />
@@ -102,6 +105,7 @@ export default function NavBar() {
             <li>
               <LocaleSwitcher />
             </li>
+
           </ul>
         </nav>
 
@@ -133,11 +137,7 @@ export default function NavBar() {
                   : classes.Side
               }
             >
-              <Link
-                onClick={changeClass}
-                href="/"
-                className="text-4xl md:text-8xl text-[#e0b472]"
-              >
+              <Link onClick={changeClass} href="/" className={resText}>
                 {t("home")}
               </Link>
             </li>
@@ -149,11 +149,7 @@ export default function NavBar() {
                   : classes.Side
               }
             >
-              <Link
-                onClick={changeClass}
-                href="/services"
-                className="text-4xl md:text-8xl text-[#e0b472]"
-              >
+              <Link onClick={changeClass} href="/services" className={resText}>
                 {t("services")}
               </Link>
             </li>
@@ -165,11 +161,7 @@ export default function NavBar() {
                   : classes.Side
               }
             >
-              <Link
-                onClick={changeClass}
-                href="/aboutUs"
-                className="text-4xl md:text-8xl text-[#e0b472]"
-              >
+              <Link onClick={changeClass} href="/aboutUs" className={resText}>
                 {t("about_us")}
               </Link>
             </li>
@@ -181,11 +173,7 @@ export default function NavBar() {
                   : classes.Side
               }
             >
-              <Link
-                onClick={changeClass}
-                href="/help"
-                className="text-4xl md:text-8xl text-[#e0b472]"
-              >
+              <Link onClick={changeClass} href="/help" className={resText}>
                 {t("help")}
               </Link>
             </li>

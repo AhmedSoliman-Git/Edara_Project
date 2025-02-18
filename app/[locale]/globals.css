@@ -3,6 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 @font-face {
   font-family: 'BubbleFont';
@@ -61,7 +63,9 @@
 
 
 
-
+:root {
+  color-scheme: light dark;
+}
 
 html,
 body {
@@ -70,6 +74,7 @@ body {
   scrollbar-color: #e0b472 rgb(27, 26, 26);
   scrollbar-width: thin;
   scroll-behavior: smooth;
+  background-color: light-dark(#f5f4f0 , black);
 }
 
 body ::selection {
@@ -191,7 +196,23 @@ a {
   height: 100%;
   z-index: 1;
 }
+.line {
+  background-color:light-dark(#e0b472 , white); ;
+}
+.serviceBg {
+  background-color:light-dark(rgb(229 229 229) , rgba(36, 35, 35, 0.479));
+}
+.serviceItemBg {
+  background-color:light-dark(white , rgb(28 28 28));
 
+}
+.whiteLine {
+  border-color:light-dark(black , white);
+
+}
+.autoShow {
+  background-color: light-dark(#ffffff5c,#000000a1);
+}
 /*TeamImg*/
 
 .tabImage {

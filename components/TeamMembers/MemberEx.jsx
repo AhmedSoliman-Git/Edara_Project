@@ -12,15 +12,15 @@ export default function MemberEx({ params }) {
   const path = usePathname();
   let divClass =
     "p-4 mt-5 md:mt-0 bg-stone-100 border-[0.2rem] font-PlatNomor border-l-[0.2rem] md:border-l-0 border-[#e0b472] w-full";
-  let p1 = "text-lg xl:text-2xl font-Azonix text-red-800 my-2";
-  let p2 = "text-lg md:text-3xl xl:text-5xl font-Azonix my-2";
+  let p1 = "text-lg xl:text-xl font-Azonix text-red-800 my-2";
+  let p2 = "text-lg md:text-2xl xl:text-3xl font-Azonix my-2";
   let myh1 = " text-[1rem] lg:text-lg xl:text-xl font-bold font-PoppinsM my-2";
   let hoverText =
     "text-[sm] mb-[0.5rem] md:mb-0 xl:text-lg font-PoppinsM hover:translate-x-4 hover:text-amber-600 duration-200 border-b max-w-max border-black pb-1";
-  let MainDiv = "my-14 lg:w-[90%] xl:w-[80%] m-auto text-left";
+  let MainDiv = "my-14 lg:w-[90%] xl:w-[80%] m-auto text-left ";
   if (path.includes("ar")) {
-    p1 = "text-lg xl:text-2xl font-arab text-right font-bold text-red-800 my-2";
-    p2 = "text-lg md:text-3xl xl:text-5xl font-arab font-bold my-2";
+    p1 = "text-lg xl:text-xl font-arab text-right font-bold text-red-800 my-2";
+    p2 = "text-lg md:text-2xl xl:text-5xl font-arab font-bold my-2";
     myh1 = "text-[1rem] lg:text-lg xl:text-xl font-bold font-arab my-2";
     hoverText =
       " text-[sm] mb-[0.5rem] md:mb-0 xl:text-lg font-arab hover:-translate-x-4 hover:text-amber-600 max-w-max ml-auto duration-200 border-b border-black pb-1";
@@ -43,7 +43,7 @@ export default function MemberEx({ params }) {
             alt={TeamDetailsData[params].name}
             className="w-[80%] md:w-[50%] m-auto md:p-0 md:m-0 h-auto object-cover border-[0.2rem] border-[#e0b472]"
           />
-          <div className={divClass}>
+          <div className={divClass + " serviceBg"}>
             <div>
               <p className={p1}>{TeamDetailsData[params].title}</p>
               <p className={p2}>{TeamDetailsData[params].name}</p>
@@ -58,7 +58,7 @@ export default function MemberEx({ params }) {
                     <ul key={Index}>
                       {item.Position.map((positionItem, itemIndex) => {
                         return (
-                          <li key={itemIndex} className={hoverText}>
+                          <li key={itemIndex} className={hoverText+ " whiteLine"}>
                             <span>{positionItem.PositionDate}</span>{" "}
                             <span>{positionItem.PostionName}</span>
                           </li>
@@ -70,7 +70,7 @@ export default function MemberEx({ params }) {
               </div>
               <h1 className="text-3xl my-3">{t("Edu")}</h1>
               <ul className="flex justify-start items-center">
-                <li className={hoverText}>
+                <li className={hoverText + " whiteLine"}>
                   {TeamDetailsData[params].Education}
                 </li>
               </ul>
@@ -88,7 +88,7 @@ export default function MemberEx({ params }) {
               {TeamDetailsData[params].Experience.map((item) => {
                 return item.projects.map((Project) => {
                   return (
-                    <li key={Project} className={hoverText}>
+                    <li key={Project} className={hoverText+" whiteLine"}>
                       <span>{Project}</span>{" "}
                     </li>
                   );
@@ -119,7 +119,7 @@ export default function MemberEx({ params }) {
               <ul>
                 {TeamDetailsData[params].Courses.map((course) => {
                   return (
-                    <li key={course} className={hoverText}>
+                    <li key={course} className={hoverText+" whiteLine"}>
                       {course}
                     </li>
                   );

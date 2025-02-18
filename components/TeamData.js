@@ -189,6 +189,7 @@ export default function TeamData() {
       MainImg: MainImg4,
       title: tD("title"),
       name: tD("MyNAME"),
+      Education: tD("Education"),
       description:tD("paragraph"),
       Experience: [
         {

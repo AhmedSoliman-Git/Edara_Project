@@ -18,7 +18,7 @@ export default function Help() {
   let heading1 = "font-bold font-PoppinsE text-lg md:text-3xl xl:text-4xl py-3";
   let trycontent =
     "flex justify-center items-center text-lg lg:text-2xl font-RedGlass border rounded-md";
-  let ulClass = "bg-slate-100 p-4 rounded-md font-PoppinsM";
+  let ulClass = "p-4 rounded-md font-PoppinsM";
   let divClass =
     "grid grid-cols-1 xl:grid-cols-2 rounded-2xl xl:p-8 gap-3 font-PoppinsM";
   let liClass = "font-bold text-xl  flex justify-start gap-3 items-center";
@@ -31,7 +31,7 @@ export default function Help() {
       "font-bold font-arab text-lg md:text-3xl xl:text-4xl py-3 text-right";
     trycontent =
       "flex justify-center items-center text-lg lg:text-2xl font-arab border rounded-md";
-    ulClass = "bg-slate-100 p-4 rounded-md font-arab text-right";
+    ulClass = "p-4 rounded-md font-arab text-right";
     divClass =
       "grid grid-cols-1 xl:grid-cols-2 rounded-2xl xl:p-8 gap-3 font-arab text-right";
     liClass = "font-bold text-xl  flex justify-end gap-3 items-center";
@@ -58,15 +58,15 @@ export default function Help() {
 
       <div
         id="myDiv"
-        className="p-2 grid xl:grid-cols-2 mt-20 md:p-4 w-full lg:w-[80%] md:gap-11 items-center rounded-tr-none rounded-tl-none m-auto bg-neutral-200 md:rounded-tr-full md:rounded-tl-full"
+        className="serviceBg p-2 grid xl:grid-cols-2 mt-20 md:p-4 w-full lg:w-[80%] md:gap-11 items-center rounded-tr-none rounded-tl-none m-auto  md:rounded-tr-full md:rounded-tl-full"
       >
-        <div>
+        <div >
           <span className={getTouch}>{t("get")}</span>
           <h1 className={heading1}>{t("help")}</h1>
           <div className={divClass}>
             <h1 className={trycontent}>{t("try")}</h1>
             <div>
-              <ul className={ulClass}>
+              <ul className={ulClass +" serviceItemBg"}>
                 <li className={liClass}>
                   {t("phones")}
                   <PiPhoneCallBold />
@@ -93,7 +93,7 @@ export default function Help() {
             </div>
 
             <div>
-              <ul className="bg-slate-100 p-4 rounded-md">
+              <ul className="serviceItemBg p-4 rounded-md">
                 <li className={liClass}>
                   {t("email")}
                   <MdOutlineAlternateEmail />
@@ -107,7 +107,7 @@ export default function Help() {
             </div>
 
             <div>
-              <ul className="bg-slate-100 p-4 rounded-md">
+              <ul className="serviceItemBg p-4 rounded-md">
                 <li className={liClass}>
                   {t("location")}
                   <GrMapLocation />

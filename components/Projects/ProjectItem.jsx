@@ -32,7 +32,7 @@ classText = "flex flex-col items-end px-3 pb-10 pt-12 bg-[#ffffff] font-arab lg:
         alt={alt}
         loading="lazy"
       />
-      <div className={classText}>
+      <div className={classText+ " serviceItemBg"}>
         <h2 className="text-2xl xl:text-4xl md:text-4xl py-3">{headingText}</h2>
         <p className={pP}>{pText}</p>
         <Link
