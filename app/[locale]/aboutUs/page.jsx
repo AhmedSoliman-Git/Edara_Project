@@ -11,9 +11,16 @@ import PageBanner from "../../../components/PageBanner";
 import StaticP from "../../../components/TeamMembers/StaticP";
 import { useTranslations } from "next-intl";
 
+export const metadata = {
+  title: "About-Us",
+  description:
+    "Erada Construction Engineering boasts a skilled team with years of expertise, delivering high-quality residential and commercial projects with precision and innovation",
+};
+
 export default function About() {
   let hClass = "text-5xl font-PlatNomor border-b-2 border-black pb-2";
   const t = useTranslations("About");
+
   return (
     <section>
       <PageBanner

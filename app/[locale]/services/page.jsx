@@ -9,6 +9,12 @@ import image4 from "../../../public/photos/projects/menofia/img2.jpg";
 import { useTranslations } from "next-intl";
 import StaticP from "../../../components/TeamMembers/StaticP";
 
+export const metadata = {
+  title: "Projects",
+  description:
+    "Erada Construction Engineering has extensive experience in executing major government projects across various sectors. We provide comprehensive solutions in wastewater treatment plants, water desalination plants, transformer installations, and electrical networks",
+};
+
 export default function Services() {
   const t = useTranslations("Projects");
   const hClass = " hover:text-blue-500";
@@ -24,7 +30,6 @@ export default function Services() {
         />
 
         <div className="my-20 p-8">
-
           <StaticP
             additionalText={t("projectTitle")}
             Id="projects"
@@ -39,7 +44,7 @@ export default function Services() {
             headingText={t("Project1H")}
             alt="AboDahb"
             link="/services/AboDahb"
-            btn ={t("Btn")}
+            btn={t("Btn")}
           />
           <ProjectItem
             projectImage={image4}
@@ -47,7 +52,7 @@ export default function Services() {
             headingText={t("Project2H")}
             alt="Menofia"
             link="/services/Menofia"
-            btn ={t("Btn")}
+            btn={t("Btn")}
           />
           <ProjectItem
             projectImage={image1}
@@ -55,7 +60,7 @@ export default function Services() {
             headingText={t("Project3H")}
             alt="Baniswef"
             link="/services/Baniswef"
-            btn ={t("Btn")}
+            btn={t("Btn")}
           />
           <ProjectItem
             projectImage={image2}
@@ -63,7 +68,7 @@ export default function Services() {
             headingText={t("Project4H")}
             alt="Fayoum"
             link="/services/Fayoum"
-            btn ={t("Btn")}
+            btn={t("Btn")}
           />
         </div>
       </section>

@@ -55,7 +55,7 @@ export default function NavBar() {
 
   return (
     <>
-      <header className={classes.header + " font-arab" } ref={headerRef}>
+      <header className={classes.header + " font-arab" } ref={headerRef} id="nav">
         <div className={classes.letters}>
           <Link href="/">
             <Image src={Logo} width={200} height={200} priority alt="Logo" />
